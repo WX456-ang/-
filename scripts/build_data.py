@@ -7,6 +7,7 @@ from pathlib import Path
 
 SITE = Path(__file__).resolve().parent.parent
 MANIFEST = SITE / "assets" / "manifest.json"
+HERO_TRAIL = SITE / "assets" / "hero-trail.json"
 TARGET = SITE / "data.js"
 
 # Tiles that do not hold up next to the rest of the work (blank pages, stray icons, screenshots).
@@ -14,8 +15,8 @@ EXCLUDE = {
     "ebook-nature-01",   # almost blank opening page
 }
 
-# Order of the opening image sequence (dark, graphic work reads best on black).
-HERO = [
+# Fallback order for the opening cursor trail, used only when assets/hero-trail.json is absent.
+FALLBACK_HERO = [
     "flower-gods-01",
     "postcards-04",
     "sichuan-opera-03",
@@ -40,7 +41,10 @@ def main() -> None:
     kept = [item for item in items if Path(item["src"]).stem not in EXCLUDE]
     by_stem = {Path(item["src"]).stem: item for item in kept}
 
-    hero = [by_stem[stem] for stem in HERO if stem in by_stem]
+    if HERO_TRAIL.exists():
+        hero = json.loads(HERO_TRAIL.read_text(encoding="utf-8"))
+    else:
+        hero = [by_stem[stem] for stem in FALLBACK_HERO if stem in by_stem]
     categories = [name for name in CATEGORY_ORDER if any(item["category"] == name for item in kept)]
 
     # Interleave projects so the waterfall never runs one case study top-to-bottom.

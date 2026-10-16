@@ -32,6 +32,9 @@
 
     var figure = document.createElement("figure");
     figure.className = "hero__item";
+    if (item.width > item.height * 1.12) {
+      figure.className += " is-wide";
+    }
     figure.style.left = x + "px";
     figure.style.top = y + "px";
 

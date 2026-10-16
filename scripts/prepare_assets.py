@@ -32,7 +32,12 @@ def natural_key(text: str):
     return [int(part) if part.isdigit() else part for part in re.split(r"(\d+)", text)]
 
 
-def export_image(src: Path, dest: Path, max_edge: int = MAX_LONG_EDGE) -> tuple[int, int] | None:
+def export_image(
+    src: Path,
+    dest: Path,
+    max_edge: int = MAX_LONG_EDGE,
+    quality: int = JPEG_QUALITY,
+) -> tuple[int, int] | None:
     """Resize one still image and save it as a progressive JPEG."""
     try:
         with Image.open(src) as img:
@@ -44,7 +49,7 @@ def export_image(src: Path, dest: Path, max_edge: int = MAX_LONG_EDGE) -> tuple[
             if scale < 1.0:
                 img = img.resize((round(width * scale), round(height * scale)), Image.LANCZOS)
             dest.parent.mkdir(parents=True, exist_ok=True)
-            img.save(dest, "JPEG", quality=JPEG_QUALITY, optimize=True, progressive=True)
+            img.save(dest, "JPEG", quality=quality, optimize=True, progressive=True)
             return img.size
     except Exception as exc:  # noqa: BLE001
         print(f"  ! skipped {src.name}: {exc}")
@@ -219,8 +224,44 @@ PROJECTS = [
     },
 ]
 
+# Images that follow the cursor on the first screen (exported smaller — they are preloaded).
+HERO_TRAIL = {
+    "slug": "hero-trail",
+    "title": "首屏跟随图",
+    "subtitle": "Hero Trail",
+    "category": "hero",
+    "hero_only": True,
+    "source": Path(r"C:\Users\Administrator\Desktop\图片"),
+    "files": [
+        "Aa06-22-060-0090(2).jpg",
+        "茶_画板 1.jpg",
+        "芙蓉花.jpg",
+        "剪纸魅力.jpg",
+        "立春.jpg",
+        "脐橙.jpg",
+        "书籍7.jpg",
+        "书籍8.jpg",
+        "书籍11.jpg",
+        "系列画2.jpg",
+        "杏花.jpg",
+    ],
+    "max_edge": 1000,
+    "quality": 78,
+}
+
 
 def collect_sources(project: dict) -> list[Path]:
+    if "files" in project:
+        source_dir = project["source"]
+        found: list[Path] = []
+        for name in project["files"]:
+            candidate = source_dir / name
+            if candidate.exists():
+                found.append(candidate)
+            else:
+                print(f"  ! missing source image: {candidate}")
+        return found
+
     source = SRC / project["source"]
     if not source.exists():
         return []
@@ -302,8 +343,9 @@ def main() -> None:
     ASSETS.mkdir(parents=True, exist_ok=True)
     REVIEW.mkdir(parents=True, exist_ok=True)
     manifest: list[dict] = []
+    hero_items: list[dict] = []
 
-    for project in PROJECTS:
+    for project in PROJECTS + [HERO_TRAIL]:
         slug = project["slug"]
         print(f"{slug}:")
 
@@ -325,33 +367,42 @@ def main() -> None:
                 stale.unlink()
 
         for index, source in enumerate(sources, start=1):
+            hero_only = project.get("hero_only", False)
             animate = project.get("animate", False)
             extension = ".webp" if animate else ".jpg"
             dest = ASSETS / f"{slug}-{index:02d}{extension}"
             if animate:
                 size = export_animation(source, dest)
             else:
-                size = export_image(source, dest)
+                size = export_image(
+                    source,
+                    dest,
+                    max_edge=project.get("max_edge", MAX_LONG_EDGE),
+                    quality=project.get("quality", JPEG_QUALITY),
+                )
             if not size:
                 continue
-            manifest.append(
-                {
-                    "src": f"assets/{dest.name}",
-                    "width": size[0],
-                    "height": size[1],
-                    "project": project["title"],
-                    "subtitle": project["subtitle"],
-                    "category": project["category"],
-                    "slug": slug,
-                    "animate": animate,
-                    "origin": str(source.relative_to(SRC)) if SRC in source.parents else source.name,
-                }
-            )
-        print(f"  exported {sum(1 for item in manifest if item['slug'] == slug)} items")
+            record = {
+                "src": f"assets/{dest.name}",
+                "width": size[0],
+                "height": size[1],
+                "project": project["title"],
+                "subtitle": project["subtitle"],
+                "category": project["category"],
+                "slug": slug,
+                "animate": animate,
+                "origin": str(source.relative_to(SRC)) if SRC in source.parents else source.name,
+            }
+            (hero_items if hero_only else manifest).append(record)
+        bucket = hero_items if project.get("hero_only") else manifest
+        print(f"  exported {sum(1 for item in bucket if item['slug'] == slug)} items")
 
     manifest_path = ASSETS / "manifest.json"
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"\nwrote {manifest_path} with {len(manifest)} items")
+    hero_path = ASSETS / "hero-trail.json"
+    hero_path.write_text(json.dumps(hero_items, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"\nwrote {manifest_path.name} with {len(manifest)} items")
+    print(f"wrote {hero_path.name} with {len(hero_items)} hero images")
 
 
 if __name__ == "__main__":

@@ -53,6 +53,7 @@ python scripts/build_data.py       # 重新生成 data.js
 | --- | --- |
 | 图片文件夹 | 电子书设计、花神、花神明信片、插画、敦煌、二十四节气、信息可视化、剪纸、赣州、AN 动图 |
 | PDF 指定页 | 标志与CIS（前 8 页）、川剧变脸（第 1/4/8/9/10/19/20/22/25 页）、长江索道（第 1/3/20/27/35/44/53/57/64/69/74/76/86 页）。页码写在 `scripts/prepare_assets.py` 的 `pages` 里 |
+| 首屏跟随图 | 桌面「图片」文件夹里的 11 张（娃哈哈插画、西湖龙井信息图、芙蓉花、剪纸魅力、立春、赣州脐橙、书籍 7/8/11、梦回敦煌、杏花），清单在 `scripts/prepare_assets.py` 的 `HERO_TRAIL`，只用于首屏、不进入瀑布流 |
 | 渲染目录 | 中间产物放在 `.review/render/`，删掉也没关系，重跑脚本会再生成 |
 
 挑选 PDF 页码之前，先用总览脚本把整份 PDF 拼成一张预览图：
@@ -65,7 +66,7 @@ python scripts/pdf_overview.py "C:\path\to\deck.pdf" ".review\overview.jpg" --co
 
 - 电子书只取了 12 页、花神明信片取 8 张作为节选（`prepare_assets.py` 里各项目的 `limit`），原始文件里的其余页面没有全部上图。
 - 图片统一压到长边 1500px、JPEG q80，A4 跨页的小字在放大后略软；需要更清晰可以调 `MAX_LONG_EDGE` 和 `JPEG_QUALITY`。
-- 首屏跟随图共 7 张，列表在 `scripts/build_data.py` 的 `HERO`；出现密度、停留时间在 `main.js` 的 `HOLD_MS` 与 `minDistance`。
+- 首屏跟随图共 11 张，导出时压到长边 1000px（因为是预加载，体积要小），横图自动给更大尺寸；出现密度、停留时间在 `main.js` 的 `HOLD_MS` 与 `minDistance`。
 - 缝隙与列数：缝隙 3px（`--gap`）、桌面三栏、≥1600px 四栏。
 
 ## 部署到 GitHub Pages

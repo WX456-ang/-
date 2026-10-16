@@ -175,6 +175,11 @@ p {
   height: auto;
 }
 
+/* landscape shots (book spreads) get more room than the portrait posters */
+.hero__item.is-wide {
+  width: clamp(178px, 21vw, 330px);
+}
+
 .hero__item.is-in {
   opacity: 1;
 }
@@ -703,6 +708,10 @@ a.contact__value:hover {
 
   .hero__item {
     width: clamp(112px, 30vw, 168px);
+  }
+
+  .hero__item.is-wide {
+    width: clamp(150px, 44vw, 240px);
   }
 
   .hero::after {
