@@ -138,6 +138,8 @@ PROJECTS = [
         "category": "文化视觉",
         "render_pdf": Path(r"C:\Users\Administrator\Desktop\川剧变脸.pdf"),
         "pages": [1, 4, 8, 9, 10, 19, 20, 22, 25],
+        # hand-picked replacement for the deck cover, saved in the repo
+        "replace": {1: Path("source-overrides/sichuan-opera-01.png")},
     },
     {
         "slug": "yangtze-cableway",
@@ -371,6 +373,13 @@ def main() -> None:
             animate = project.get("animate", False)
             extension = ".webp" if animate else ".jpg"
             dest = ASSETS / f"{slug}-{index:02d}{extension}"
+            override = project.get("replace", {}).get(index)
+            if override:
+                override_path = override if override.is_absolute() else SITE / override
+                if override_path.exists():
+                    source = override_path
+                else:
+                    print(f"  ! replacement missing for #{index}: {override_path}")
             if animate:
                 size = export_animation(source, dest)
             else:
@@ -382,6 +391,12 @@ def main() -> None:
                 )
             if not size:
                 continue
+            if SRC in source.parents:
+                origin = str(source.relative_to(SRC))
+            elif SITE in source.parents:
+                origin = str(source.relative_to(SITE)).replace("\\", "/")
+            else:
+                origin = source.name
             record = {
                 "src": f"assets/{dest.name}",
                 "width": size[0],
@@ -391,7 +406,7 @@ def main() -> None:
                 "category": project["category"],
                 "slug": slug,
                 "animate": animate,
-                "origin": str(source.relative_to(SRC)) if SRC in source.parents else source.name,
+                "origin": origin,
             }
             (hero_items if hero_only else manifest).append(record)
         bucket = hero_items if project.get("hero_only") else manifest

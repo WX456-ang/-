@@ -144,18 +144,18 @@ window.PORTFOLIO = {
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": "brand-cis-src01-p1.png"
+      "origin": ".review/render/brand-cis/brand-cis-src01-p1.png"
     },
     {
       "src": "assets/sichuan-opera-01.jpg",
-      "width": 1500,
-      "height": 844,
+      "width": 1192,
+      "height": 667,
       "project": "川剧变脸 · 视觉方案",
       "subtitle": "Sichuan Opera — Visual Proposal",
       "category": "文化视觉",
       "slug": "sichuan-opera",
       "animate": false,
-      "origin": "sichuan-opera-src01-p1.png"
+      "origin": "source-overrides/sichuan-opera-01.png"
     },
     {
       "src": "assets/yangtze-cableway-01.jpg",
@@ -166,7 +166,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": "yangtze-cableway-src01-p1.png"
+      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src01-p1.png"
     },
     {
       "src": "assets/flower-gods-01.jpg",
@@ -287,7 +287,7 @@ window.PORTFOLIO = {
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": "brand-cis-src02-p2.png"
+      "origin": ".review/render/brand-cis/brand-cis-src02-p2.png"
     },
     {
       "src": "assets/sichuan-opera-02.jpg",
@@ -298,7 +298,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "sichuan-opera",
       "animate": false,
-      "origin": "sichuan-opera-src02-p4.png"
+      "origin": ".review/render/sichuan-opera/sichuan-opera-src02-p4.png"
     },
     {
       "src": "assets/yangtze-cableway-02.jpg",
@@ -309,7 +309,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": "yangtze-cableway-src02-p3.png"
+      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src02-p3.png"
     },
     {
       "src": "assets/flower-gods-02.jpg",
@@ -430,7 +430,7 @@ window.PORTFOLIO = {
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": "brand-cis-src03-p3.png"
+      "origin": ".review/render/brand-cis/brand-cis-src03-p3.png"
     },
     {
       "src": "assets/sichuan-opera-03.jpg",
@@ -441,7 +441,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "sichuan-opera",
       "animate": false,
-      "origin": "sichuan-opera-src03-p8.png"
+      "origin": ".review/render/sichuan-opera/sichuan-opera-src03-p8.png"
     },
     {
       "src": "assets/yangtze-cableway-03.jpg",
@@ -452,7 +452,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": "yangtze-cableway-src03-p20.png"
+      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src03-p20.png"
     },
     {
       "src": "assets/flower-gods-03.jpg",
@@ -540,7 +540,7 @@ window.PORTFOLIO = {
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": "brand-cis-src04-p4.png"
+      "origin": ".review/render/brand-cis/brand-cis-src04-p4.png"
     },
     {
       "src": "assets/sichuan-opera-04.jpg",
@@ -551,7 +551,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "sichuan-opera",
       "animate": false,
-      "origin": "sichuan-opera-src04-p9.png"
+      "origin": ".review/render/sichuan-opera/sichuan-opera-src04-p9.png"
     },
     {
       "src": "assets/yangtze-cableway-04.jpg",
@@ -562,7 +562,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": "yangtze-cableway-src04-p27.png"
+      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src04-p27.png"
     },
     {
       "src": "assets/flower-gods-04.jpg",
@@ -606,7 +606,7 @@ window.PORTFOLIO = {
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": "brand-cis-src05-p5.png"
+      "origin": ".review/render/brand-cis/brand-cis-src05-p5.png"
     },
     {
       "src": "assets/sichuan-opera-05.jpg",
@@ -617,7 +617,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "sichuan-opera",
       "animate": false,
-      "origin": "sichuan-opera-src05-p10.png"
+      "origin": ".review/render/sichuan-opera/sichuan-opera-src05-p10.png"
     },
     {
       "src": "assets/yangtze-cableway-05.jpg",
@@ -628,7 +628,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": "yangtze-cableway-src05-p35.png"
+      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src05-p35.png"
     },
     {
       "src": "assets/flower-gods-05.jpg",
@@ -672,7 +672,7 @@ window.PORTFOLIO = {
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": "brand-cis-src06-p6.png"
+      "origin": ".review/render/brand-cis/brand-cis-src06-p6.png"
     },
     {
       "src": "assets/sichuan-opera-06.jpg",
@@ -683,7 +683,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "sichuan-opera",
       "animate": false,
-      "origin": "sichuan-opera-src06-p19.png"
+      "origin": ".review/render/sichuan-opera/sichuan-opera-src06-p19.png"
     },
     {
       "src": "assets/yangtze-cableway-06.jpg",
@@ -694,7 +694,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": "yangtze-cableway-src06-p44.png"
+      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src06-p44.png"
     },
     {
       "src": "assets/flower-gods-06.jpg",
@@ -738,7 +738,7 @@ window.PORTFOLIO = {
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": "brand-cis-src07-p7.png"
+      "origin": ".review/render/brand-cis/brand-cis-src07-p7.png"
     },
     {
       "src": "assets/sichuan-opera-07.jpg",
@@ -749,7 +749,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "sichuan-opera",
       "animate": false,
-      "origin": "sichuan-opera-src07-p20.png"
+      "origin": ".review/render/sichuan-opera/sichuan-opera-src07-p20.png"
     },
     {
       "src": "assets/yangtze-cableway-07.jpg",
@@ -760,7 +760,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": "yangtze-cableway-src07-p53.png"
+      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src07-p53.png"
     },
     {
       "src": "assets/flower-gods-07.jpg",
@@ -804,7 +804,7 @@ window.PORTFOLIO = {
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": "brand-cis-src08-p8.png"
+      "origin": ".review/render/brand-cis/brand-cis-src08-p8.png"
     },
     {
       "src": "assets/sichuan-opera-08.jpg",
@@ -815,7 +815,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "sichuan-opera",
       "animate": false,
-      "origin": "sichuan-opera-src08-p22.png"
+      "origin": ".review/render/sichuan-opera/sichuan-opera-src08-p22.png"
     },
     {
       "src": "assets/yangtze-cableway-08.jpg",
@@ -826,7 +826,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": "yangtze-cableway-src08-p57.png"
+      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src08-p57.png"
     },
     {
       "src": "assets/flower-gods-08.jpg",
@@ -870,7 +870,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "sichuan-opera",
       "animate": false,
-      "origin": "sichuan-opera-src09-p25.png"
+      "origin": ".review/render/sichuan-opera/sichuan-opera-src09-p25.png"
     },
     {
       "src": "assets/yangtze-cableway-09.jpg",
@@ -881,7 +881,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": "yangtze-cableway-src09-p64.png"
+      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src09-p64.png"
     },
     {
       "src": "assets/flower-gods-09.jpg",
@@ -914,7 +914,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": "yangtze-cableway-src10-p69.png"
+      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src10-p69.png"
     },
     {
       "src": "assets/flower-gods-10.jpg",
@@ -947,7 +947,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": "yangtze-cableway-src11-p74.png"
+      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src11-p74.png"
     },
     {
       "src": "assets/flower-gods-11.jpg",
@@ -969,7 +969,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": "yangtze-cableway-src12-p76.png"
+      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src12-p76.png"
     },
     {
       "src": "assets/flower-gods-12.jpg",
@@ -991,7 +991,7 @@ window.PORTFOLIO = {
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": "yangtze-cableway-src13-p86.png"
+      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src13-p86.png"
     }
   ],
   "categories": [
