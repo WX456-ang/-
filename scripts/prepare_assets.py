@@ -131,16 +131,16 @@ PROJECTS = [
         "title": "川剧变脸 · 视觉方案",
         "subtitle": "Sichuan Opera — Visual Proposal",
         "category": "文化视觉",
-        "pptx": Path("川剧变脸.pptx"),
-        "pptx_slides": 10,
+        "render_pdf": Path(r"C:\Users\Administrator\Desktop\川剧变脸.pdf"),
+        "pages": [1, 4, 8, 9, 10, 19, 20, 22, 25],
     },
     {
         "slug": "yangtze-cableway",
         "title": "长江索道 · 视觉方案",
         "subtitle": "Yangtze Cableway — Visual Proposal",
         "category": "文化视觉",
-        "pptx": Path("长江索道.pptx"),
-        "pptx_slides": 10,
+        "render_pdf": Path(r"C:\Users\Administrator\Desktop\长江索道.pdf"),
+        "pages": [1, 3, 20, 27, 35, 44, 53, 57, 64, 69, 74, 76, 86],
     },
     {
         "slug": "flower-gods",
@@ -237,8 +237,8 @@ def collect_sources(project: dict) -> list[Path]:
     return files
 
 
-def render_pdf_pages(pdf_path: Path, slug: str, pages: int) -> list[Path]:
-    """Render the first pages of a PDF to JPEG using pypdfium2."""
+def render_pdf_pages(pdf_path: Path, slug: str, pages: list[int] | None, limit: int) -> list[Path]:
+    """Render selected pages (1-based) of a PDF, or the first `limit` pages."""
     try:
         import pypdfium2 as pdfium
     except ImportError:
@@ -249,15 +249,19 @@ def render_pdf_pages(pdf_path: Path, slug: str, pages: int) -> list[Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
     written: list[Path] = []
     doc = pdfium.PdfDocument(str(pdf_path))
-    count = min(pages, len(doc))
-    for index in range(count):
+    indexes = [p - 1 for p in pages] if pages else list(range(min(limit, len(doc))))
+    count = len(indexes)
+    for position, index in enumerate(indexes):
+        if index < 0 or index >= len(doc):
+            print(f"  ! page {index + 1} out of range in {pdf_path.name}")
+            continue
         page = doc[index]
-        bitmap = page.render(scale=1.6)
+        bitmap = page.render(scale=2.2)
         image = bitmap.to_pil()
-        target = out_dir / f"{slug}-src{index + 1:02d}.png"
+        target = out_dir / f"{slug}-src{position + 1:02d}-p{index + 1}.png"
         image.save(target)
         written.append(target)
-        print(f"  rendered {pdf_path.name} page {index + 1}/{count}")
+        print(f"  rendered {pdf_path.name} page {index + 1} ({position + 1}/{count})")
     return written
 
 
@@ -304,13 +308,21 @@ def main() -> None:
         print(f"{slug}:")
 
         if "render_pdf" in project:
-            sources = render_pdf_pages(SRC / project["render_pdf"], slug, project.get("pdf_pages", 8))
+            pdf_path = project["render_pdf"]
+            if not pdf_path.is_absolute():
+                pdf_path = SRC / pdf_path
+            sources = render_pdf_pages(pdf_path, slug, project.get("pages"), project.get("pdf_pages", 8))
         elif "pptx" in project:
             sources = extract_pptx_images(SRC / project["pptx"], slug, project.get("pptx_slides", 10))
         else:
             sources = collect_sources(project)
 
         contact_sheet(sources, REVIEW / f"contact-{slug}.jpg")
+
+        # drop previously exported files for this project so renames never leave strays
+        for stale in list(ASSETS.glob(f"{slug}-*")):
+            if stale.is_file() and stale.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp", ".gif"}:
+                stale.unlink()
 
         for index, source in enumerate(sources, start=1):
             animate = project.get("animate", False)

@@ -47,13 +47,26 @@ python scripts/build_data.py       # 重新生成 data.js
 
 `.review/` 只存放校对用的拼版图，不影响网站。
 
-## 需要你确认的地方
+素材来源分三类：
 
-1. **英文名**：目前按你写的 `W.ang.X-` 直接显示（含结尾短横）。要改成 `W.ang.X` 或全大写 `W.ANG.X-` 都是一行改动。
-2. **联系信息**：邮箱 `hello@wangx.design` 是占位符，微信/电话写的是「待补充」，请给我真实信息。
-3. **首屏跟随图**：现在用了花神、花神明信片、川剧脸谱、长江索道共 7 张。要换成别的作品，改 `scripts/build_data.py` 里的 `HERO` 列表即可；出现密度、停留时间在 `main.js` 的 `HOLD_MS` 与 `minDistance` 里调。
-4. **PPT 与 PDF 项目**：`川剧变脸.pptx`、`长江索道.pptx` 只能从文件里提取内嵌图片，页面排版（文字、栅格）提取不到。`标志与CIS.pdf` 是按页渲染的，效果正常。如果 PPT 想要完整效果，需要你先导出成 PDF 或图片。
-5. **缝隙与列数**：缝隙 3px、桌面三栏，想要更密或更疏都是一行变量。
+| 来源 | 说明 |
+| --- | --- |
+| 图片文件夹 | 电子书设计、花神、花神明信片、插画、敦煌、二十四节气、信息可视化、剪纸、赣州、AN 动图 |
+| PDF 指定页 | 标志与CIS（前 8 页）、川剧变脸（第 1/4/8/9/10/19/20/22/25 页）、长江索道（第 1/3/20/27/35/44/53/57/64/69/74/76/86 页）。页码写在 `scripts/prepare_assets.py` 的 `pages` 里 |
+| 渲染目录 | 中间产物放在 `.review/render/`，删掉也没关系，重跑脚本会再生成 |
+
+挑选 PDF 页码之前，先用总览脚本把整份 PDF 拼成一张预览图：
+
+```powershell
+python scripts/pdf_overview.py "C:\path\to\deck.pdf" ".review\overview.jpg" --columns 12 --tile 180
+```
+
+## 已知取舍
+
+- 电子书只取了 12 页、花神明信片取 8 张作为节选（`prepare_assets.py` 里各项目的 `limit`），原始文件里的其余页面没有全部上图。
+- 图片统一压到长边 1500px、JPEG q80，A4 跨页的小字在放大后略软；需要更清晰可以调 `MAX_LONG_EDGE` 和 `JPEG_QUALITY`。
+- 首屏跟随图共 7 张，列表在 `scripts/build_data.py` 的 `HERO`；出现密度、停留时间在 `main.js` 的 `HOLD_MS` 与 `minDistance`。
+- 缝隙与列数：缝隙 3px（`--gap`）、桌面三栏、≥1600px 四栏。
 
 ## 部署到 GitHub Pages
 

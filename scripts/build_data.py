@@ -12,22 +12,17 @@ TARGET = SITE / "data.js"
 # Tiles that do not hold up next to the rest of the work (blank pages, stray icons, screenshots).
 EXCLUDE = {
     "ebook-nature-01",   # almost blank opening page
-    "sichuan-opera-02",  # 48px icon
-    "sichuan-opera-03",  # thin graphic sliver
-    "yangtze-cableway-02",  # gradient placeholder slide
-    "yangtze-cableway-03",  # website screenshot
-    "yangtze-cableway-05",  # text screenshot
 }
 
 # Order of the opening image sequence (dark, graphic work reads best on black).
 HERO = [
     "flower-gods-01",
     "postcards-04",
+    "sichuan-opera-03",
     "flower-gods-09",
-    "sichuan-opera-01",
     "postcards-08",
-    "flower-gods-05",
-    "yangtze-cableway-06",
+    "sichuan-opera-02",
+    "yangtze-cableway-01",
 ]
 
 CATEGORY_ORDER = [
