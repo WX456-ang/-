@@ -136,10 +136,16 @@ PROJECTS = [
         "title": "川剧变脸 · 视觉方案",
         "subtitle": "Sichuan Opera — Visual Proposal",
         "category": "文化视觉",
-        "render_pdf": Path(r"C:\Users\Administrator\Desktop\川剧变脸.pdf"),
-        "pages": [1, 4, 8, 9, 10, 19, 20, 22, 25],
-        # hand-picked replacement for the deck cover, saved in the repo
-        "replace": {1: Path("source-overrides/sichuan-opera-01.png")},
+        # hand-picked presentation crops kept in the repo (no PDF rendering)
+        "source": Path("source-overrides/sichuan-opera"),
+        "files": [
+            "sichuan-01-characters.png",
+            "sichuan-02-plates.png",
+            "sichuan-03-cutlery.png",
+            "sichuan-04-mugs.png",
+            "sichuan-05-dimensions.png",
+            "sichuan-06-giftbox.png",
+        ],
     },
     {
         "slug": "yangtze-cableway",

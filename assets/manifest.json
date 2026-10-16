@@ -250,95 +250,62 @@
     "category": "文化视觉",
     "slug": "sichuan-opera",
     "animate": false,
-    "origin": "source-overrides/sichuan-opera-01.png"
+    "origin": "sichuan-01-characters.png"
   },
   {
     "src": "assets/sichuan-opera-02.jpg",
-    "width": 1500,
-    "height": 844,
+    "width": 1189,
+    "height": 673,
     "project": "川剧变脸 · 视觉方案",
     "subtitle": "Sichuan Opera — Visual Proposal",
     "category": "文化视觉",
     "slug": "sichuan-opera",
     "animate": false,
-    "origin": ".review/render/sichuan-opera/sichuan-opera-src02-p4.png"
+    "origin": "sichuan-02-plates.png"
   },
   {
     "src": "assets/sichuan-opera-03.jpg",
-    "width": 1500,
-    "height": 844,
+    "width": 1194,
+    "height": 671,
     "project": "川剧变脸 · 视觉方案",
     "subtitle": "Sichuan Opera — Visual Proposal",
     "category": "文化视觉",
     "slug": "sichuan-opera",
     "animate": false,
-    "origin": ".review/render/sichuan-opera/sichuan-opera-src03-p8.png"
+    "origin": "sichuan-03-cutlery.png"
   },
   {
     "src": "assets/sichuan-opera-04.jpg",
-    "width": 1500,
-    "height": 844,
+    "width": 1193,
+    "height": 667,
     "project": "川剧变脸 · 视觉方案",
     "subtitle": "Sichuan Opera — Visual Proposal",
     "category": "文化视觉",
     "slug": "sichuan-opera",
     "animate": false,
-    "origin": ".review/render/sichuan-opera/sichuan-opera-src04-p9.png"
+    "origin": "sichuan-04-mugs.png"
   },
   {
     "src": "assets/sichuan-opera-05.jpg",
-    "width": 1500,
-    "height": 844,
+    "width": 1191,
+    "height": 668,
     "project": "川剧变脸 · 视觉方案",
     "subtitle": "Sichuan Opera — Visual Proposal",
     "category": "文化视觉",
     "slug": "sichuan-opera",
     "animate": false,
-    "origin": ".review/render/sichuan-opera/sichuan-opera-src05-p10.png"
+    "origin": "sichuan-05-dimensions.png"
   },
   {
     "src": "assets/sichuan-opera-06.jpg",
-    "width": 1500,
-    "height": 844,
+    "width": 1194,
+    "height": 671,
     "project": "川剧变脸 · 视觉方案",
     "subtitle": "Sichuan Opera — Visual Proposal",
     "category": "文化视觉",
     "slug": "sichuan-opera",
     "animate": false,
-    "origin": ".review/render/sichuan-opera/sichuan-opera-src06-p19.png"
-  },
-  {
-    "src": "assets/sichuan-opera-07.jpg",
-    "width": 1500,
-    "height": 844,
-    "project": "川剧变脸 · 视觉方案",
-    "subtitle": "Sichuan Opera — Visual Proposal",
-    "category": "文化视觉",
-    "slug": "sichuan-opera",
-    "animate": false,
-    "origin": ".review/render/sichuan-opera/sichuan-opera-src07-p20.png"
-  },
-  {
-    "src": "assets/sichuan-opera-08.jpg",
-    "width": 1500,
-    "height": 844,
-    "project": "川剧变脸 · 视觉方案",
-    "subtitle": "Sichuan Opera — Visual Proposal",
-    "category": "文化视觉",
-    "slug": "sichuan-opera",
-    "animate": false,
-    "origin": ".review/render/sichuan-opera/sichuan-opera-src08-p22.png"
-  },
-  {
-    "src": "assets/sichuan-opera-09.jpg",
-    "width": 1500,
-    "height": 844,
-    "project": "川剧变脸 · 视觉方案",
-    "subtitle": "Sichuan Opera — Visual Proposal",
-    "category": "文化视觉",
-    "slug": "sichuan-opera",
-    "animate": false,
-    "origin": ".review/render/sichuan-opera/sichuan-opera-src09-p25.png"
+    "origin": "sichuan-06-giftbox.png"
   },
   {
     "src": "assets/yangtze-cableway-01.jpg",
