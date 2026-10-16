@@ -390,135 +390,135 @@ window.PORTFOLIO = {
     },
     {
       "src": "assets/yangtze-cableway-01.jpg",
-      "width": 1500,
-      "height": 844,
+      "width": 1275,
+      "height": 717,
       "project": "长江索道 · 视觉方案",
       "subtitle": "Yangtze Cableway — Visual Proposal",
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src01-p1.png"
+      "origin": "yangtze-01-elements.png"
     },
     {
       "src": "assets/yangtze-cableway-02.jpg",
-      "width": 1500,
-      "height": 844,
+      "width": 1272,
+      "height": 713,
       "project": "长江索道 · 视觉方案",
       "subtitle": "Yangtze Cableway — Visual Proposal",
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src02-p3.png"
+      "origin": "yangtze-02-combination.png"
     },
     {
       "src": "assets/yangtze-cableway-03.jpg",
-      "width": 1500,
-      "height": 844,
+      "width": 1275,
+      "height": 715,
       "project": "长江索道 · 视觉方案",
       "subtitle": "Yangtze Cableway — Visual Proposal",
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src03-p20.png"
+      "origin": "yangtze-03-final-logo.png"
     },
     {
       "src": "assets/yangtze-cableway-04.jpg",
-      "width": 1500,
-      "height": 844,
+      "width": 1275,
+      "height": 716,
       "project": "长江索道 · 视觉方案",
       "subtitle": "Yangtze Cableway — Visual Proposal",
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src04-p27.png"
+      "origin": "yangtze-04-colors.png"
     },
     {
       "src": "assets/yangtze-cableway-05.jpg",
-      "width": 1500,
-      "height": 844,
+      "width": 1274,
+      "height": 717,
       "project": "长江索道 · 视觉方案",
       "subtitle": "Yangtze Cableway — Visual Proposal",
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src05-p35.png"
+      "origin": "yangtze-05-graphic-edit-a.png"
     },
     {
       "src": "assets/yangtze-cableway-06.jpg",
-      "width": 1500,
-      "height": 844,
+      "width": 1276,
+      "height": 716,
       "project": "长江索道 · 视觉方案",
       "subtitle": "Yangtze Cableway — Visual Proposal",
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src06-p44.png"
+      "origin": "yangtze-06-graphic-edit-b.png"
     },
     {
       "src": "assets/yangtze-cableway-07.jpg",
-      "width": 1500,
-      "height": 844,
+      "width": 1273,
+      "height": 715,
       "project": "长江索道 · 视觉方案",
       "subtitle": "Yangtze Cableway — Visual Proposal",
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src07-p53.png"
+      "origin": "yangtze-07-color-pick.png"
     },
     {
       "src": "assets/yangtze-cableway-08.jpg",
-      "width": 1500,
-      "height": 844,
+      "width": 1273,
+      "height": 716,
       "project": "长江索道 · 视觉方案",
       "subtitle": "Yangtze Cableway — Visual Proposal",
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src08-p57.png"
+      "origin": "yangtze-08-combined-layouts.png"
     },
     {
       "src": "assets/yangtze-cableway-09.jpg",
-      "width": 1500,
-      "height": 844,
+      "width": 1273,
+      "height": 715,
       "project": "长江索道 · 视觉方案",
       "subtitle": "Yangtze Cableway — Visual Proposal",
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src09-p64.png"
+      "origin": "yangtze-09-partial-layouts.png"
     },
     {
       "src": "assets/yangtze-cableway-10.jpg",
-      "width": 1500,
-      "height": 844,
+      "width": 1271,
+      "height": 716,
       "project": "长江索道 · 视觉方案",
       "subtitle": "Yangtze Cableway — Visual Proposal",
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src10-p69.png"
+      "origin": "yangtze-10-circular-mockups.png"
     },
     {
       "src": "assets/yangtze-cableway-11.jpg",
-      "width": 1500,
-      "height": 844,
+      "width": 1270,
+      "height": 715,
       "project": "长江索道 · 视觉方案",
       "subtitle": "Yangtze Cableway — Visual Proposal",
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src11-p74.png"
+      "origin": "yangtze-11-posters.png"
     },
     {
       "src": "assets/yangtze-cableway-12.jpg",
-      "width": 1500,
-      "height": 844,
+      "width": 1274,
+      "height": 713,
       "project": "长江索道 · 视觉方案",
       "subtitle": "Yangtze Cableway — Visual Proposal",
       "category": "文化视觉",
       "slug": "yangtze-cableway",
       "animate": false,
-      "origin": ".review/render/yangtze-cableway/yangtze-cableway-src12-p76.png"
+      "origin": "yangtze-12-ip-characters.png"
     },
     {
       "src": "assets/sichuan-opera-01.jpg",

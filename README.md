@@ -49,7 +49,7 @@ python scripts/build_data.py       # 重新生成 data.js
 
 ### 改完代码记得升版本号
 
-`index.html` 里给 `styles.css`、`main.js`、`data.js` 都带了 `?v=8`。改动这三个文件后，把数字加一（`?v=9`），浏览器才不会继续用缓存里的旧版本；只换图片、不改代码时不用动。自己本地预览遇到样式没生效时，按 `Ctrl + F5` 强制刷新即可。
+`index.html` 里给 `styles.css`、`main.js`、`data.js` 都带了 `?v=9`。改动这三个文件后，把数字加一（`?v=10`），浏览器才不会继续用缓存里的旧版本；只换图片、不改代码时不用动。自己本地预览遇到样式没生效时，按 `Ctrl + F5` 强制刷新即可。
 
 素材来源分三类：
 
@@ -58,7 +58,7 @@ python scripts/build_data.py       # 重新生成 data.js
 | 图片文件夹 | 电子书设计、花神、花神明信片、插画、敦煌、二十四节气、信息可视化、剪纸、赣州、AN 动图 |
 | PDF 指定页 | 标志与CIS（前 8 页）、川剧变脸（第 1/4/8/9/10/19/20/22/25 页）、长江索道（第 1/3/20/27/35/44/53/57/64/69/74/76/86 页）。页码写在 `scripts/prepare_assets.py` 的 `pages` 里 |
 | 首屏跟随图 | 桌面「图片」文件夹里的 11 张（娃哈哈插画、西湖龙井信息图、芙蓉花、剪纸魅力、立春、赣州脐橙、书籍 7/8/11、梦回敦煌、杏花），清单在 `scripts/prepare_assets.py` 的 `HERO_TRAIL`，只用于首屏、不进入瀑布流 |
-| 手工挑选的成品图 | `source-overrides/` 存放你直接指定的成图。川剧变脸整套（6 张：人物、餐盘、餐具、马克杯、尺寸、礼盒）放在 `source-overrides/sichuan-opera/`，项目用 `source` + `files` 指定；单个替换可用 `"replace": {序号: 路径}` |
+| 手工挑选的成品图 | `source-overrides/` 存放你直接指定的成图：川剧变脸 6 张放在 `source-overrides/sichuan-opera/`，长江索道 12 张放在 `source-overrides/yangtze-cableway/`，项目用 `source` + `files` 指定顺序；单个替换也可用 `"replace": {序号: 路径}` |
 | 渲染目录 | 中间产物放在 `.review/render/`，删掉也没关系，重跑脚本会再生成 |
 
 挑选 PDF 页码之前，先用总览脚本把整份 PDF 拼成一张预览图：
@@ -69,7 +69,7 @@ python scripts/pdf_overview.py "C:\path\to\deck.pdf" ".review\overview.jpg" --co
 
 ## 已知取舍
 
-- 每个项目的张数在 `scripts/prepare_assets.py` 里指定：花神明信片 12 张全用；电子书取 12 页（其中一页是空白扉页，不显示，实际 11 张）；标志与 CIS 从 37 页里挑 10 页；长江索道从 86 页里挑 12 页；川剧变脸改用 6 张成品图（不再从 PDF 渲染）。
+- 每个项目的张数在 `scripts/prepare_assets.py` 里指定：花神明信片 12 张全用；电子书取 12 页（其中一页是空白扉页，不显示，实际 11 张）；标志与 CIS 从 37 页里挑 10 页；长江索道（12 张）和川剧变脸（6 张）已改用成品图，不再从 PDF 渲染。
 - 图片统一压到长边 1500px、JPEG q80，A4 跨页的小字在放大后略软；需要更清晰可以调 `MAX_LONG_EDGE` 和 `JPEG_QUALITY`。
 - 首屏跟随图共 11 张，导出时压到长边 1000px（因为是预加载，体积要小），横图自动给更大尺寸；出现密度、停留时间在 `main.js` 的 `HOLD_MS` 与 `minDistance`；出现速度（0.15 秒、直接清晰）和淡出速度（0.5 秒缓出）在 `styles.css` 的 `.hero__item` 与 `.hero__item.is-out`。
 - 缝隙与列数：缝隙 3px（`--gap`）、桌面三栏、≥1600px 四栏。
