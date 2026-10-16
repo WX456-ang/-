@@ -24,8 +24,8 @@
   var trailAlive = [];
   var lastPoint = null;
   var MAX_ALIVE = 6;
-  var HOLD_MS = 1000;
-  var OUT_MS = 380;
+  var HOLD_MS = 900;
+  var OUT_MS = 560;
 
   function spawnTrailImage(x, y, dx, dy) {
     var item = hero[trailCursor % hero.length];
@@ -51,10 +51,10 @@
     figure.appendChild(img);
 
     var tilt = Number((Math.random() * 10 - 5).toFixed(2));
-    var lead = { x: (dx || 0) * 0.5, y: (dy || 0) * 0.5 };
+    var lead = { x: (dx || 0) * 0.25, y: (dy || 0) * 0.25 };
     figure.style.transform =
       "translate(-50%, -50%) translate(" + lead.x + "px, " + lead.y + "px) rotate(" +
-      (tilt + (Math.random() * 4 - 2)).toFixed(2) + "deg) scale(0.88)";
+      (tilt + (Math.random() * 2 - 1)).toFixed(2) + "deg) scale(0.97)";
     var settled = "translate(-50%, -50%) rotate(" + tilt + "deg) scale(1)";
     trail.appendChild(figure);
     trailAlive.push(figure);
@@ -67,8 +67,8 @@
     window.setTimeout(function () {
       figure.classList.add("is-out");
       figure.style.transform =
-        "translate(-50%, -50%) translate(0px, " + (Math.random() * 26 - 18).toFixed(1) +
-        "px) rotate(" + tilt + "deg) scale(1.05)";
+        "translate(-50%, -50%) translate(0px, " + (Math.random() * 22 - 16).toFixed(1) +
+        "px) rotate(" + tilt + "deg) scale(1.04)";
       window.setTimeout(function () {
         figure.remove();
         var position = trailAlive.indexOf(figure);

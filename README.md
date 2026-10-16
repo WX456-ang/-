@@ -49,7 +49,7 @@ python scripts/build_data.py       # 重新生成 data.js
 
 ### 改完代码记得升版本号
 
-`index.html` 里给 `styles.css`、`main.js`、`data.js` 都带了 `?v=2`。改动这三个文件后，把数字加一（`?v=3`），浏览器才不会继续用缓存里的旧版本；只换图片、不改代码时不用动。自己本地预览遇到样式没生效时，按 `Ctrl + F5` 强制刷新即可。
+`index.html` 里给 `styles.css`、`main.js`、`data.js` 都带了 `?v=3`。改动这三个文件后，把数字加一（`?v=4`），浏览器才不会继续用缓存里的旧版本；只换图片、不改代码时不用动。自己本地预览遇到样式没生效时，按 `Ctrl + F5` 强制刷新即可。
 
 素材来源分三类：
 
@@ -70,7 +70,7 @@ python scripts/pdf_overview.py "C:\path\to\deck.pdf" ".review\overview.jpg" --co
 
 - 电子书只取了 12 页、花神明信片取 8 张作为节选（`prepare_assets.py` 里各项目的 `limit`），原始文件里的其余页面没有全部上图。
 - 图片统一压到长边 1500px、JPEG q80，A4 跨页的小字在放大后略软；需要更清晰可以调 `MAX_LONG_EDGE` 和 `JPEG_QUALITY`。
-- 首屏跟随图共 11 张，导出时压到长边 1000px（因为是预加载，体积要小），横图自动给更大尺寸；出现密度、停留时间在 `main.js` 的 `HOLD_MS` 与 `minDistance`。
+- 首屏跟随图共 11 张，导出时压到长边 1000px（因为是预加载，体积要小），横图自动给更大尺寸；出现密度、停留时间在 `main.js` 的 `HOLD_MS` 与 `minDistance`；出现速度（0.15 秒、直接清晰）和淡出速度（0.5 秒缓出）在 `styles.css` 的 `.hero__item` 与 `.hero__item.is-out`。
 - 缝隙与列数：缝隙 3px（`--gap`）、桌面三栏、≥1600px 四栏。
 
 ## 部署到 GitHub Pages
