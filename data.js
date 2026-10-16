@@ -588,113 +588,91 @@ window.PORTFOLIO = {
     },
     {
       "src": "assets/brand-cis-01.jpg",
-      "width": 1500,
-      "height": 526,
+      "width": 1005,
+      "height": 765,
       "project": "标志与 CIS 系统",
       "subtitle": "Brand Mark & CIS System",
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": ".review/render/brand-cis/brand-cis-src01-p1.png"
+      "origin": "brand-01-basic-elements.png"
     },
     {
       "src": "assets/brand-cis-02.jpg",
-      "width": 1500,
-      "height": 556,
+      "width": 1007,
+      "height": 764,
       "project": "标志与 CIS 系统",
       "subtitle": "Brand Mark & CIS System",
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": ".review/render/brand-cis/brand-cis-src02-p2.png"
+      "origin": "brand-02-grid-clear-space.png"
     },
     {
       "src": "assets/brand-cis-03.jpg",
-      "width": 1500,
-      "height": 556,
+      "width": 1008,
+      "height": 763,
       "project": "标志与 CIS 系统",
       "subtitle": "Brand Mark & CIS System",
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": ".review/render/brand-cis/brand-cis-src03-p4.png"
+      "origin": "brand-03-chinese-type.png"
     },
     {
       "src": "assets/brand-cis-04.jpg",
-      "width": 1500,
-      "height": 556,
+      "width": 1009,
+      "height": 762,
       "project": "标志与 CIS 系统",
       "subtitle": "Brand Mark & CIS System",
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": ".review/render/brand-cis/brand-cis-src04-p10.png"
+      "origin": "brand-04-english-type-color.png"
     },
     {
       "src": "assets/brand-cis-05.jpg",
-      "width": 1500,
-      "height": 556,
+      "width": 1004,
+      "height": 764,
       "project": "标志与 CIS 系统",
       "subtitle": "Brand Mark & CIS System",
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": ".review/render/brand-cis/brand-cis-src05-p12.png"
+      "origin": "brand-05-auxiliary.png"
     },
     {
       "src": "assets/brand-cis-06.jpg",
-      "width": 1500,
-      "height": 556,
+      "width": 1005,
+      "height": 761,
       "project": "标志与 CIS 系统",
       "subtitle": "Brand Mark & CIS System",
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": ".review/render/brand-cis/brand-cis-src06-p19.png"
+      "origin": "brand-06-typography-rules.png"
     },
     {
       "src": "assets/brand-cis-07.jpg",
-      "width": 1500,
-      "height": 556,
+      "width": 1006,
+      "height": 761,
       "project": "标志与 CIS 系统",
       "subtitle": "Brand Mark & CIS System",
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": ".review/render/brand-cis/brand-cis-src07-p22.png"
+      "origin": "brand-07-office-supplies.png"
     },
     {
       "src": "assets/brand-cis-08.jpg",
-      "width": 1500,
-      "height": 556,
+      "width": 1005,
+      "height": 766,
       "project": "标志与 CIS 系统",
       "subtitle": "Brand Mark & CIS System",
       "category": "品牌设计",
       "slug": "brand-cis",
       "animate": false,
-      "origin": ".review/render/brand-cis/brand-cis-src08-p25.png"
-    },
-    {
-      "src": "assets/brand-cis-09.jpg",
-      "width": 1500,
-      "height": 556,
-      "project": "标志与 CIS 系统",
-      "subtitle": "Brand Mark & CIS System",
-      "category": "品牌设计",
-      "slug": "brand-cis",
-      "animate": false,
-      "origin": ".review/render/brand-cis/brand-cis-src09-p34.png"
-    },
-    {
-      "src": "assets/brand-cis-10.jpg",
-      "width": 1500,
-      "height": 556,
-      "project": "标志与 CIS 系统",
-      "subtitle": "Brand Mark & CIS System",
-      "category": "品牌设计",
-      "slug": "brand-cis",
-      "animate": false,
-      "origin": ".review/render/brand-cis/brand-cis-src10-p36.png"
+      "origin": "brand-08-apparel.png"
     },
     {
       "src": "assets/illustration-01.jpg",

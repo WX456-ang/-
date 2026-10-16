@@ -128,8 +128,18 @@ PROJECTS = [
         "title": "标志与 CIS 系统",
         "subtitle": "Brand Mark & CIS System",
         "category": "品牌设计",
-        "render_pdf": Path("标志与CIS.pdf"),
-        "pages": [1, 2, 4, 10, 12, 19, 22, 25, 34, 36],
+        # hand-picked manual spreads kept in the repo (four pages per image)
+        "source": Path("source-overrides/brand-cis"),
+        "files": [
+            "brand-01-basic-elements.png",
+            "brand-02-grid-clear-space.png",
+            "brand-03-chinese-type.png",
+            "brand-04-english-type-color.png",
+            "brand-05-auxiliary.png",
+            "brand-06-typography-rules.png",
+            "brand-07-office-supplies.png",
+            "brand-08-apparel.png",
+        ],
     },
     {
         "slug": "sichuan-opera",
