@@ -174,6 +174,7 @@ p {
 .hero__item img {
   width: 100%;
   height: auto;
+  border-radius: 12px;
 }
 
 /* landscape shots (book spreads) get more room than the portrait posters */
@@ -716,6 +717,10 @@ a.contact__value:hover {
 
   .hero__item.is-wide {
     width: clamp(150px, 44vw, 240px);
+  }
+
+  .hero__item img {
+    border-radius: 10px;
   }
 
   .hero::after {
