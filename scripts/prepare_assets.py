@@ -129,7 +129,7 @@ PROJECTS = [
         "subtitle": "Brand Mark & CIS System",
         "category": "品牌设计",
         "render_pdf": Path("标志与CIS.pdf"),
-        "pdf_pages": 8,
+        "pages": [1, 2, 4, 10, 12, 19, 22, 25, 34, 36],
     },
     {
         "slug": "sichuan-opera",
@@ -147,7 +147,7 @@ PROJECTS = [
         "subtitle": "Yangtze Cableway — Visual Proposal",
         "category": "文化视觉",
         "render_pdf": Path(r"C:\Users\Administrator\Desktop\长江索道.pdf"),
-        "pages": [1, 3, 20, 27, 35, 44, 53, 57, 64, 69, 74, 76, 86],
+        "pages": [1, 3, 20, 27, 35, 44, 53, 57, 64, 69, 74, 76],
     },
     {
         "slug": "flower-gods",
@@ -164,7 +164,7 @@ PROJECTS = [
         "category": "编辑设计",
         "source": Path("花神明信片"),
         "pattern": "*.jpg",
-        "limit": 8,
+        "limit": 12,
     },
     {
         "slug": "illustration",

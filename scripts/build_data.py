@@ -35,6 +35,23 @@ CATEGORY_ORDER = [
     "动态影像",
 ]
 
+# Waterfall order: one project after another, exactly as the designer listed them.
+SLUG_ORDER = [
+    "flower-gods",        # 十二花神海报
+    "postcards",          # 花神明信片
+    "yangtze-cableway",   # 长江索道
+    "sichuan-opera",      # 川剧变脸
+    "brand-cis",          # 标志与 CIS 系统
+    "illustration",       # 娃哈哈 AD 钙奶
+    "ebook-nature",       # 重庆自然风貌电子书
+    "solar-terms",        # 二十四节气
+    "infovis-tea",        # 西湖龙井信息可视化
+    "papercut",           # 剪纸
+    "ganzhou",            # 赣州
+    "motion-animals",     # 动物动态图形
+    "dunhuang",           # 敦煌
+]
+
 
 def main() -> None:
     items = json.loads(MANIFEST.read_text(encoding="utf-8"))
@@ -47,16 +64,16 @@ def main() -> None:
         hero = [by_stem[stem] for stem in FALLBACK_HERO if stem in by_stem]
     categories = [name for name in CATEGORY_ORDER if any(item["category"] == name for item in kept)]
 
-    # Interleave projects so the waterfall never runs one case study top-to-bottom.
+    # Group by project, in the order above; order inside a project stays as exported.
     buckets: dict[str, list[dict]] = {}
     for item in kept:
         buckets.setdefault(item["slug"], []).append(item)
-    order = sorted(buckets, key=lambda slug: kept.index(buckets[slug][0]))
+    fallback = sorted(buckets, key=lambda slug: kept.index(buckets[slug][0]))
+    order = [slug for slug in SLUG_ORDER if slug in buckets]
+    order += [slug for slug in fallback if slug not in order]
     interleaved: list[dict] = []
-    while any(buckets[slug] for slug in order):
-        for slug in order:
-            if buckets[slug]:
-                interleaved.append(buckets[slug].pop(0))
+    for slug in order:
+        interleaved.extend(buckets[slug])
     kept = interleaved
 
     payload = {"hero": hero, "items": kept, "categories": categories}

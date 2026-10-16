@@ -162,7 +162,7 @@
     "category": "品牌设计",
     "slug": "brand-cis",
     "animate": false,
-    "origin": ".review/render/brand-cis/brand-cis-src03-p3.png"
+    "origin": ".review/render/brand-cis/brand-cis-src03-p4.png"
   },
   {
     "src": "assets/brand-cis-04.jpg",
@@ -173,7 +173,7 @@
     "category": "品牌设计",
     "slug": "brand-cis",
     "animate": false,
-    "origin": ".review/render/brand-cis/brand-cis-src04-p4.png"
+    "origin": ".review/render/brand-cis/brand-cis-src04-p10.png"
   },
   {
     "src": "assets/brand-cis-05.jpg",
@@ -184,7 +184,7 @@
     "category": "品牌设计",
     "slug": "brand-cis",
     "animate": false,
-    "origin": ".review/render/brand-cis/brand-cis-src05-p5.png"
+    "origin": ".review/render/brand-cis/brand-cis-src05-p12.png"
   },
   {
     "src": "assets/brand-cis-06.jpg",
@@ -195,7 +195,7 @@
     "category": "品牌设计",
     "slug": "brand-cis",
     "animate": false,
-    "origin": ".review/render/brand-cis/brand-cis-src06-p6.png"
+    "origin": ".review/render/brand-cis/brand-cis-src06-p19.png"
   },
   {
     "src": "assets/brand-cis-07.jpg",
@@ -206,7 +206,7 @@
     "category": "品牌设计",
     "slug": "brand-cis",
     "animate": false,
-    "origin": ".review/render/brand-cis/brand-cis-src07-p7.png"
+    "origin": ".review/render/brand-cis/brand-cis-src07-p22.png"
   },
   {
     "src": "assets/brand-cis-08.jpg",
@@ -217,7 +217,29 @@
     "category": "品牌设计",
     "slug": "brand-cis",
     "animate": false,
-    "origin": ".review/render/brand-cis/brand-cis-src08-p8.png"
+    "origin": ".review/render/brand-cis/brand-cis-src08-p25.png"
+  },
+  {
+    "src": "assets/brand-cis-09.jpg",
+    "width": 1500,
+    "height": 556,
+    "project": "标志与 CIS 系统",
+    "subtitle": "Brand Mark & CIS System",
+    "category": "品牌设计",
+    "slug": "brand-cis",
+    "animate": false,
+    "origin": ".review/render/brand-cis/brand-cis-src09-p34.png"
+  },
+  {
+    "src": "assets/brand-cis-10.jpg",
+    "width": 1500,
+    "height": 556,
+    "project": "标志与 CIS 系统",
+    "subtitle": "Brand Mark & CIS System",
+    "category": "品牌设计",
+    "slug": "brand-cis",
+    "animate": false,
+    "origin": ".review/render/brand-cis/brand-cis-src10-p36.png"
   },
   {
     "src": "assets/sichuan-opera-01.jpg",
@@ -451,17 +473,6 @@
     "origin": ".review/render/yangtze-cableway/yangtze-cableway-src12-p76.png"
   },
   {
-    "src": "assets/yangtze-cableway-13.jpg",
-    "width": 1500,
-    "height": 844,
-    "project": "长江索道 · 视觉方案",
-    "subtitle": "Yangtze Cableway — Visual Proposal",
-    "category": "文化视觉",
-    "slug": "yangtze-cableway",
-    "animate": false,
-    "origin": ".review/render/yangtze-cableway/yangtze-cableway-src13-p86.png"
-  },
-  {
     "src": "assets/flower-gods-01.jpg",
     "width": 1060,
     "height": 1500,
@@ -613,7 +624,7 @@
     "category": "编辑设计",
     "slug": "postcards",
     "animate": false,
-    "origin": "花神明信片\\明信片-04.jpg"
+    "origin": "花神明信片\\明信片-03.jpg"
   },
   {
     "src": "assets/postcards-03.jpg",
@@ -624,7 +635,7 @@
     "category": "编辑设计",
     "slug": "postcards",
     "animate": false,
-    "origin": "花神明信片\\明信片-05.jpg"
+    "origin": "花神明信片\\明信片-04.jpg"
   },
   {
     "src": "assets/postcards-04.jpg",
@@ -635,7 +646,7 @@
     "category": "编辑设计",
     "slug": "postcards",
     "animate": false,
-    "origin": "花神明信片\\明信片-06.jpg"
+    "origin": "花神明信片\\明信片-05.jpg"
   },
   {
     "src": "assets/postcards-05.jpg",
@@ -646,7 +657,7 @@
     "category": "编辑设计",
     "slug": "postcards",
     "animate": false,
-    "origin": "花神明信片\\明信片-08.jpg"
+    "origin": "花神明信片\\明信片-06.jpg"
   },
   {
     "src": "assets/postcards-06.jpg",
@@ -657,7 +668,7 @@
     "category": "编辑设计",
     "slug": "postcards",
     "animate": false,
-    "origin": "花神明信片\\明信片-10.jpg"
+    "origin": "花神明信片\\明信片-07.jpg"
   },
   {
     "src": "assets/postcards-07.jpg",
@@ -668,7 +679,7 @@
     "category": "编辑设计",
     "slug": "postcards",
     "animate": false,
-    "origin": "花神明信片\\明信片-11.jpg"
+    "origin": "花神明信片\\明信片-08.jpg"
   },
   {
     "src": "assets/postcards-08.jpg",
@@ -679,7 +690,51 @@
     "category": "编辑设计",
     "slug": "postcards",
     "animate": false,
+    "origin": "花神明信片\\明信片-09.jpg"
+  },
+  {
+    "src": "assets/postcards-09.jpg",
+    "width": 945,
+    "height": 1299,
+    "project": "花神明信片",
+    "subtitle": "Flower Deity Postcards",
+    "category": "编辑设计",
+    "slug": "postcards",
+    "animate": false,
+    "origin": "花神明信片\\明信片-10.jpg"
+  },
+  {
+    "src": "assets/postcards-10.jpg",
+    "width": 945,
+    "height": 1299,
+    "project": "花神明信片",
+    "subtitle": "Flower Deity Postcards",
+    "category": "编辑设计",
+    "slug": "postcards",
+    "animate": false,
+    "origin": "花神明信片\\明信片-11.jpg"
+  },
+  {
+    "src": "assets/postcards-11.jpg",
+    "width": 945,
+    "height": 1299,
+    "project": "花神明信片",
+    "subtitle": "Flower Deity Postcards",
+    "category": "编辑设计",
+    "slug": "postcards",
+    "animate": false,
     "origin": "花神明信片\\明信片-12.jpg"
+  },
+  {
+    "src": "assets/postcards-12.jpg",
+    "width": 945,
+    "height": 1299,
+    "project": "花神明信片",
+    "subtitle": "Flower Deity Postcards",
+    "category": "编辑设计",
+    "slug": "postcards",
+    "animate": false,
+    "origin": "花神明信片\\明信片_画板 1.jpg"
   },
   {
     "src": "assets/illustration-01.jpg",
