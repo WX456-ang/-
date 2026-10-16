@@ -377,24 +377,25 @@ p {
   border-bottom-color: var(--grass);
 }
 
-/* waterfall: hairline gaps, square corners */
+/* waterfall: hairline gaps, square corners, filled left-to-right (see layoutGrid in main.js) */
 .grid {
-  column-count: 3;
-  column-gap: var(--gap);
+  position: relative;
+  width: 100%;
 }
 
 .tile {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   width: 100%;
-  margin: 0 0 var(--gap);
+  margin: 0;
   padding: 0;
   border: 0;
   background: #0b0b0b;
   font: inherit;
   color: inherit;
   text-align: left;
-  break-inside: avoid;
   cursor: pointer;
   opacity: 0;
   transform: translateY(14px);
@@ -673,18 +674,6 @@ a.contact__value:hover {
   }
 }
 
-@media (min-width: 1600px) {
-  .grid {
-    column-count: 4;
-  }
-}
-
-@media (max-width: 1024px) {
-  .grid {
-    column-count: 2;
-  }
-}
-
 @media (max-width: 860px) {
   .hero {
     min-height: 0;
@@ -739,10 +728,6 @@ a.contact__value:hover {
 }
 
 @media (max-width: 620px) {
-  .grid {
-    column-count: 2;
-  }
-
   .work {
     padding-left: 8px;
     padding-right: 8px;

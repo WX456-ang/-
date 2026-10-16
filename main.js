@@ -150,6 +150,7 @@
     tile.className = "tile";
     tile.dataset.category = item.category;
     tile.dataset.index = String(position);
+    tile.dataset.ratio = String(item.height / item.width);
     tile.setAttribute("aria-label", item.project + "，" + item.category + "，查看大图");
 
     var img = document.createElement("img");
@@ -181,6 +182,59 @@
 
   var tiles = [];
   var visible = items.slice();
+  var resizeTimer = null;
+
+  function gridColumnCount() {
+    var width = window.innerWidth;
+    if (width >= 1600) {
+      return 4;
+    }
+    if (width > 1024) {
+      return 3;
+    }
+    return 2;
+  }
+
+  function gridGap() {
+    var value = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--gap"));
+    return isNaN(value) ? 3 : value;
+  }
+
+  /* Row-major masonry: items fill the shortest column in order, so the grid reads
+     left to right, top to bottom instead of stacking down each column. */
+  function layoutGrid() {
+    if (!grid || !tiles.length) {
+      if (grid) {
+        grid.style.height = "0px";
+      }
+      return;
+    }
+    var gap = gridGap();
+    var columns = gridColumnCount();
+    var available = grid.clientWidth;
+    var columnWidth = (available - gap * (columns - 1)) / columns;
+    var heights = [];
+    var index;
+    for (index = 0; index < columns; index += 1) {
+      heights.push(0);
+    }
+
+    tiles.forEach(function (tile) {
+      var ratio = parseFloat(tile.dataset.ratio) || 1.4;
+      var target = 0;
+      for (var column = 1; column < columns; column += 1) {
+        if (heights[column] < heights[target] - 0.5) {
+          target = column;
+        }
+      }
+      tile.style.width = columnWidth + "px";
+      tile.style.left = Math.round(target * (columnWidth + gap)) + "px";
+      tile.style.top = Math.round(heights[target]) + "px";
+      heights[target] += columnWidth * ratio + gap;
+    });
+
+    grid.style.height = Math.ceil(Math.max.apply(null, heights)) + "px";
+  }
 
   function renderGrid(list) {
     if (!grid) {
@@ -193,6 +247,7 @@
       grid.appendChild(tile);
       tiles.push(tile);
     });
+    layoutGrid();
     observeTiles();
   }
 
@@ -267,6 +322,18 @@
   }
 
   renderGrid(visible);
+
+  window.addEventListener(
+    "resize",
+    function () {
+      if (resizeTimer) {
+        window.clearTimeout(resizeTimer);
+      }
+      resizeTimer = window.setTimeout(layoutGrid, 120);
+    },
+    { passive: true }
+  );
+  window.addEventListener("load", layoutGrid);
 
   /* -------------------------------------------------------------- lightbox */
 
